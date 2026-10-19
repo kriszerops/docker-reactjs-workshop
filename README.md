@@ -187,9 +187,9 @@ The workshop UI is a static Vite build served by Zerops **Static** (SPA fallback
 
 **Quick start**
 
-1. In [Zerops](https://app.zerops.io), choose **Import a project** and paste `import.yaml`.
-2. Open the **workshop** service → connect this GitHub repo → trigger deploy.
-3. Enable the Zerops subdomain or attach your domain under **Public access**.
+1. In [Zerops](https://app.zerops.io), choose **Import a project** and paste `import.yaml`, or run `zcli project project-import import.yaml`.
+2. Import clones the public repo (URL without a `.git` suffix) and builds setup `workshop`. Connect GitHub on the service only when later pushes should redeploy.
+3. The Zerops subdomain is already enabled. Attach your own domain under **Public access** if you need one.
 
 Service hostname must stay **`workshop`** — it matches `setup: workshop` in `zerops.yaml`. Deploy manually from the repo root with [zCLI](https://docs.zerops.io/references/cli/): `zcli push workshop`.
 
